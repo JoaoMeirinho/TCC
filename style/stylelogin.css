@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(../img/wave.png);
+    background-size:contain;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+}
+
+.card{
+    padding: 20px;
+    width: 75%;
+    max-width: 500px;
+    height: 350px;
+    background-color: rgba(219, 219, 219, 0.205);
+    border-radius: 30px;
+    backdrop-filter: blur(15px);
+    /* border: 1px solid white; */
+    -webkit-box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.46); 
+box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.25);
+}
+.card h1{
+    margin-top: 10px;
+    text-align: center;
+    color: rgb(38, 206, 122);
+}
+.card div{
+    display: flex;
+    width: 100%;
+    height: auto;
+   
+    flex-direction: column;
+    
+}
+.card div input{
+    margin-top: 20px;
+    height: 40px;
+    background-color: rgba(240, 248, 255, 0);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.46); 
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 5px;
+
+}
+.card div input:hover, .card div input:focus{
+    border: 1px solid rgb(38, 206, 122);
+    transition: 0.2s ease-in-out;
+    transform: scale(1.05);
+    outline: 0;
+}
+#submit{
+    background-color: rgb(38, 206, 122);
+    color: white;
+    font-size: 16px;
+    margin: auto;
+    margin-top: 50px;
+    width: 75%;
+}
+.card a{
+    margin: auto;
+    margin-top: 10px;
+    color: rgb(28, 163, 96);;
+}
+::-webkit-input-placeholder {
+    color: rgb(0, 0, 0);
+    
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    color: rgb(0, 0, 0);  
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    color: rgb(0, 0, 0);  
+ }
+ 
+ :-ms-input-placeholder {  
+    color: rgb(0, 0, 0);  
+ }
