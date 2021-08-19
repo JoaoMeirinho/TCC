@@ -45,17 +45,70 @@ nav{
 }
 .login:hover{
     transition: 0.2s ease-in-out;
-    border: 2px solid rgb(253, 253, 253);
     background-color: #06573c;
     -webkit-box-shadow: 0px 6px 9px -5px rgba(0,0,0,0.43);
     -moz-box-shadow: 0px 6px 9px -5px rgba(0,0,0,0.43);
     box-shadow: 0px 6px 9px -2px rgba(0,0,0,0.43);
 }
+.image{
+    background-image: url(/img/backgroundFilter.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+    width: 100vw;
+    color:#fff;
+    vertical-align: middle;
+    display: table-cell;
+}
+.image h1{
+    font-size: clamp(0.5em, 1.5em + 2vw, 3em);
+    letter-spacing: 2px; 
+}
+.image p{
+    font-size: clamp(0.3em, 1em + 1vw, 2em);
+}
 h1{
-    margin-top: 20px;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     text-align: center;
 }
 p{
     text-align: center;
     margin: 10px 5%;
+}
+.quote{
+    margin: auto;
+    margin-top: 70px;
+    height: 250px auto;
+    width: 50%;
+    font-size: clamp(0.5em, 1.5em + 2vw, 3em);    
+    color: rgb(75, 75, 75);
+    border-left: 3px solid #000;
+}
+#name{
+    font-size: clamp(0.3em, 0.5em + 0.5vw, 2em);
+}
+.btn-agendar{
+    display: block;
+    margin: auto;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 50%;
+    font-size:clamp(1em, 1em + 0.5vw, 2em);
+    background-color: #096a49;
+    color: #fff;
+    -webkit-box-shadow: 0px 3px 9px -5px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0px 3px 9px -5px rgba(0,0,0,0.43);
+    box-shadow: 0px 3px 9px -4px rgba(0,0,0,0.43);
+}
+.btn-agendar:hover{
+    transition: 0.2s ease-in-out;
+    transform: scale(1.05);
+    background-color: #06573c;
+    -webkit-box-shadow: 0px 6px 9px -5px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0px 6px 9px -5px rgba(0,0,0,0.43);
+    box-shadow: 0px 6px 9px -2px rgba(0,0,0,0.43);
 }
