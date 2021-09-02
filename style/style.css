@@ -8,30 +8,48 @@ body{
     font-family: 'montserrat', sans-serif;
 }
 nav{
-    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px;
     -webkit-box-shadow: 0px 9px 5px -5px rgba(0,0,0,0.43);
     -moz-box-shadow: 0px 9px 5px -5px rgba(0,0,0,0.43);
     box-shadow: 0px 9px 5px -5px rgba(0,0,0,0.43);
-    height: 20px;
+    height: auto 100px ;
+}
+.menu{
+    /* border: 1px solid red; */
+    display: flex;
+    width: 20vw;
+    justify-content: space-between;
+    
 }
 .menu li, .menu{
+    
+    /* border: 1px solid red; */
     font-size: 16px;
     font-family: 'montserrat', sans-serif;
     text-decoration: none;
-    display: inline-block;
+    /* display: inline; */
 }
 .menu li{
-    margin-right: 10px;
+       /* margin-right: 40px; */
+        display: inline;
     border-bottom: 2px solid #096a4a00;
 }
 .menu li:hover{
     transition: 0.2s ease-in-out;
     border-bottom: 2px solid #096a49;
 }
+#divLogo{
+    width: 30%;
+   
+}
+#logo{
+    width: 100%;
+}
+
 .login{
-    position: absolute;
-    top: 10px;
-    right: 30px;
     padding: 10px 30px;
     font-family: montserrat;
     font-weight: bold;
@@ -91,11 +109,12 @@ p{
     font-size: clamp(0.3em, 0.5em + 0.5vw, 2em);
 }
 .btn-agendar{
+    font-family: 'montserrat', sans-serif;
     display: block;
     margin: auto;
     border: none;
-    border-radius: 20px;
-    height: 40px;
+    border-radius: 30px;
+    height: 50px;
     width: 50%;
     font-size:clamp(1em, 1em + 0.5vw, 2em);
     background-color: #096a49;
@@ -111,4 +130,65 @@ p{
     -webkit-box-shadow: 0px 6px 9px -5px rgba(0,0,0,0.43);
     -moz-box-shadow: 0px 6px 9px -5px rgba(0,0,0,0.43);
     box-shadow: 0px 6px 9px -2px rgba(0,0,0,0.43);
+}
+.mapa{
+    text-align: center;
+    margin-top: 30px;
+}
+#maps{
+    -webkit-box-shadow: 0px 6px 9px -5px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0px 6px 9px -5px rgba(0,0,0,0.43);
+    box-shadow: 0px 6px 9px -2px rgba(0,0,0,0.43);
+}
+footer{
+    display: flex;
+    background-color: #06573c;
+    margin-top: 50px;
+    height: 340px;
+    padding: 20px;
+}
+.pt1{
+    width: 33%;
+    color: #fff;
+    margin-right: 0.5%;
+}
+.pt1 h2{
+    font-size: 24px;
+}
+.pt1 p{
+    text-align: left;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 13px;
+}
+.pt2{
+    width: 33%;
+    text-align: center;
+    color: white;
+    margin-right: 0.5%;
+}
+.pt2 ul{
+    list-style: none;
+    text-align: center;
+    margin-top: 10px;
+}
+.pt3{
+    width: 33%;
+    color: #fff;
+}
+.pt3 input{
+    display: block;
+    border: none;
+    border-radius: 10px;
+    background-color: #064b34;
+}
+#assunto{
+    margin-top: 10px;
+    width: 100%;
+    height: 35px;
+}
+#mailText{
+    width: 100%;
+    margin-top: 10px;
+    height: 200px;
 }
