@@ -21,7 +21,7 @@ body{
     padding: 20px;
     width: 75%;
     max-width: 500px;
-    height: 350px;
+    height: 350px auto;
     background-color: rgba(219, 219, 219, 0.205);
     border-radius: 30px;
     backdrop-filter: blur(15px);

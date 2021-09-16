@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,13 +10,14 @@
 </head>
 <body>
    <nav>
+         <!-- <img src="img/sidebar2.png" alt="" id="sidebar"> -->
         <ul class="menu">
            <li><a>Home</a></li>
            <li><a>Serviços</a></li>
            <li><a>Sobre</a></li>
         </ul>
         <div id="divLogo"><img src="img/logoRETIS.png" alt="" id="logo"></div>
-        <a href="#"><button class="login">Login</button></a>
+        <button class="login">Login</button>
    </nav>
    <div class="image">
       <h1>Massagens Terapêuticas</h1>
@@ -54,10 +56,13 @@
             </ul>
          </div>
          <div class="pt3">
-            <form action="">
+            <form action="script/enviarEmail.php" method="POST">
                <h2>Contate-nos</h2>
-               <input type="text" name="assunto" id="assunto">
-               <input type="text" name="mailText" id="mailText">
+               <input type="text" name="nome" id="nome" placeholder="Seu Nome">
+               <input type="text" name="mail" id="mail" placeholder="Seu Email">
+               <input type="text" name="assunto" id="assunto" placeholder="Assunto">
+               <textarea name="mailText" id="mailText" placeholder="Mensagem"></textarea>
+               <input type="submit" value="Enviar">
             </form>
          </div>
    </footer>
