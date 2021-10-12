@@ -1,5 +1,5 @@
 
-<!-- <?php
+<?php
 session_start();
 if (isset($_SESSION['user'])){
 echo "Bem-vindo(a),".$_SESSION['user'];
@@ -7,7 +7,7 @@ echo "Bem-vindo(a),".$_SESSION['user'];
 
 
 
-?> -->
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -28,10 +28,10 @@ echo "Bem-vindo(a),".$_SESSION['user'];
         <div id="divLogo"><img src="img/logoRETIS.png" alt="" id="logo"></div>
         <button class="login"><a href="login.php">Login</a></button>
    </nav>
-   <div class="image">
+   <!-- <div class="image">
       <h1>Massagens Terapêuticas</h1>
       <p>Para viver melhor a vida!</p>
-   </div>
+   </div> -->
    <h1>Por que fazer uma massagem?</h1>
    <p>A massagem é uma troca de energias em que, através de técnicas de deslizamento, fricção e amassamento, 
       se trabalha o sistema circulatório, linfático, nervoso e energético, que proporcionam a descontração 
@@ -65,13 +65,14 @@ echo "Bem-vindo(a),".$_SESSION['user'];
             </ul>
          </div>
          <div class="pt3">
-            <h2>Contate-nos</h2>
-            <div class="icons">
-               <a href=""><img src="img/instagram.png" alt="" class="icon-link"></a>
-               <a href=""><img src="img/whatsapp.png" alt="" class="icon-link"></a>
-               <a href=""><img src="img/facebook.png" alt="" class="icon-link"></a>
-               <a href=""><img src="img/mail.png" alt="" class="icon-link"></a>
-            </div>
+            <form action="script/enviarEmail.php" method="POST">
+               <h2>Contate-nos</h2>
+               <input type="text" name="nome" id="nome" placeholder="Seu Nome">
+               <input type="text" name="mail" id="mail" placeholder="Seu Email">
+               <input type="text" name="assunto" id="assunto" placeholder="Assunto">
+               <textarea name="mailText" id="mailText" placeholder="Mensagem"></textarea>
+               <input type="submit" value="Enviar">
+            </form>
          </div>
    </footer>
 </body>

@@ -10,15 +10,19 @@
 <body>
     <div class="card">
         <h1>Cadastro</h1>
+        <form action="script/cadastro.php" method="post">
         <div>
-            <input type="text" name="name" placeholder="Nome" id="nome"required>
-            <input type="mail" name="mail" placeholder="Email" id="mail"required>
-            <input type="number" name="numTel" placeholder="Número de Telefone" id="numTel"required>
-            <input type="text" name="user" placeholder="Usuário" id="user"required>
-            <input type="password" name="pass" placeholder="Senha" id="pass" required>
-            <input type="submit" name="submit" id="submit">
-            <a href="login.html">Já tem uma conta? Faça seu login!</a>
+                <input type="text" name="nome" placeholder="Nome" id="nome"required>
+                <input type="mail" name="mail" placeholder="Email" id="mail"required>
+                <input type="number" name="numTel" placeholder="Número de Telefone" id="numTel"required>
+                <input type="text" name="endereco" placeholder="Endereço" id="endereco"required>
+                <input type="text" name="user" placeholder="Usuário" id="user"required>
+                <input type="password" name="pass" placeholder="Senha" id="pass" required>
+                <input type="submit" name="submit" id="submit">
+                <a href="login.php">Já tem uma conta? Faça seu login!</a>
+           
         </div>
+    </form>
     </div>
     
 </body>
