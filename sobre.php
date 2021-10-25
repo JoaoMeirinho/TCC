@@ -2,7 +2,7 @@
 <?php
 session_start();
 if (isset($_SESSION['user'])){
-echo "Bem-vindo(a),".$_SESSION['user'];
+echo "<p>Bem-vindo(a),".$_SESSION['user']."</p>";
 };
 
 
@@ -22,25 +22,44 @@ echo "Bem-vindo(a),".$_SESSION['user'];
          <!-- <img src="img/sidebar2.png" alt="" id="sidebar"> -->
         <ul class="menu">
            <li><a href='index.php'>Home</a></li>
-           <li><a>Serviços</a></li>
+           <li><a href="servicos.php">Serviços</a></li>
            <li><a href='sobre.php'>Sobre</a></li>
         </ul>
         <div id="divLogo"><img src="img/logoRETIS.png" alt="" id="logo"></div>
-        <button class="login"><a href="login.php">Login</a></button>
+        <?php
+        if(empty($_SESSION['user'])){
+            echo "<button class='login'><a href='login.php'>Login</a></button>";
+        }else{
+           echo "<button class='login-on'><a href='pedidos.php'>Pedidos</a></button>";
+        };
+         ?>
    </nav>
    <!-- <div class="image">
       <h1>Massagens Terapêuticas</h1>
       <p>Para viver melhor a vida!</p>
    </div> -->
-   <h1>Por que fazer uma massagem?</h1>
-   <p>A massagem é uma troca de energias em que, através de técnicas de deslizamento, fricção e amassamento, 
-      se trabalha o sistema circulatório, linfático, nervoso e energético, que proporcionam a descontração 
-      do corpo e da mente, combatendo a fadiga física e mental.
+   <h1>O que é a Reflexoterapia?</h1>
+   <p>Uma prática de terapêutica alternativa que consiste na aplicação 
+      de pressão nos pés e nas mãos, de forma a produzir em 
+      efeito noutra parte do corpo. A pressão é aplicada 
+      com o polegar, dedos e mãos segundo técnicas específicas 
+      e sem a utilização de óleos ou loções.
    </p>
+   <h1>Benefícios da Reflexoterapia </h1>
    <p>
-      Alguns dos benefícios da massagem que mais refletem de forma efetiva no dia a dia incluem o Controle 
-      do estresse, Diminuição da ansiedade, Alívio da tensão e das dores musculares, Alívio das dores de cabeça, 
-      Diminuição do cansaço e Diminuição das insônias.
+   Além da redução do estresse, a reflexologia 
+   possui vários outros benefícios, 
+   dentre os quais podemos destacar:
+   <ul class="text-list">
+      <li>Alívio de dores;</li>
+      <li>Agindo sobre o sistema nervoso, elimina acúmulos de sangue nos plexos
+         nervosos dos pés;</li>
+      <li>Estímulo do sistema imunológico;</li>
+      <li>Livra o corpo de toxinas;</li>
+      <li>Ajuda na recuperação pós-cirúrgica;</li>
+      <li>Melhora da saúde e bem estar geral, como influência na atividade intestinal, 
+         qualidade do sono e muito mais!</li>
+   </ul>
    </p>
    <div class="quote">
       <p><i>"Fazer massagens mudou a minha vida!"</i></p>
@@ -59,20 +78,19 @@ echo "Bem-vindo(a),".$_SESSION['user'];
          <div class="pt2">
             <h2>Acesso Rápido</h2>
             <ul>
-               <li>Home</li>
-               <li>Serviços</li>
-               <li>Sobre</li>
+               <a href="index.php"><li>Home</li></a>
+               <a href="servicos.php"><li>Serviços</li></a>
+               <a href="sobre.php"><li>Sobre</li></a>
             </ul>
          </div>
          <div class="pt3">
-            <form action="script/enviarEmail.php" method="POST">
-               <h2>Contate-nos</h2>
-               <input type="text" name="nome" id="nome" placeholder="Seu Nome">
-               <input type="text" name="mail" id="mail" placeholder="Seu Email">
-               <input type="text" name="assunto" id="assunto" placeholder="Assunto">
-               <textarea name="mailText" id="mailText" placeholder="Mensagem"></textarea>
-               <input type="submit" value="Enviar">
-            </form>
+            <h2>Contate-nos</h2>
+            <div class="icons">
+               <a href="https://www.instagram.com/terapiasintegrativasorocaba/"><img src="img/instagram.png" alt="" class="icon-link"></a>
+               <a href="https://api.whatsapp.com/send?phone=5515996898161"><img src="img/whatsapp.png" alt="" class="icon-link"></a>
+               <a href="https://www.facebook.com/Reflexoterapia-e-Terapias-Integrativas-Sorocaba-626355597815833"><img src="img/facebook.png" alt="" class="icon-link"></a>
+               <a href="mailto:mcftintegrativas@gmail.com"><img src="img/mail.png" alt="" class="icon-link"></a>
+            </div>
          </div>
    </footer>
 </body>

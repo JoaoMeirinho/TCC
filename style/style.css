@@ -47,17 +47,21 @@ nav{
 .menu li a{
     text-decoration: none;
 }
+.menu li a:visited{
+    color:#000;
+}
 #divLogo{
     width: 30%;
-   
+   min-width: 200px;
 }
 #logo{
     width: 100%;
 }
 
-.login{
+.login, .btn-pedido{
     padding: 0.5em;
-    width: 10vw;
+    width: 12vw;
+    height: 40px;
     text-align: center;
     font-size: clamp(0.2em, 0.4em + 0.4vw, 2em);
     font-family: montserrat;
@@ -70,16 +74,32 @@ nav{
     -moz-box-shadow: 0px 3px 9px -5px rgba(0,0,0,0.43);
     box-shadow: 0px 3px 9px -4px rgba(0,0,0,0.43);
 }
-.login:hover{
+.login:hover, .btn-pedido:hover{
     transition: 0.2s ease-in-out;
     background-color: #06573c;
     -webkit-box-shadow: 0px 6px 9px -5px rgba(0,0,0,0.43);
     -moz-box-shadow: 0px 6px 9px -5px rgba(0,0,0,0.43);
     box-shadow: 0px 6px 9px -2px rgba(0,0,0,0.43);
 }
-.login a{
+.login a, .btn-pedido a{
     color: #fff;
     text-decoration: none;
+}
+.btn-pedido{
+    width: 40%;
+}
+.login-on a{
+    color:#096a49;
+    text-decoration: none;
+}
+.login-on{
+    width: 12vw;
+    height: 40px;
+    padding: 0.5em;
+    font-size: clamp(0.2em, 0.4em + 0.4vw, 2em);
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #096a49;
+    border-radius: 4px;
 }
 .image{
     background-image: url(../img/backgroundFilter.jpg);
@@ -185,6 +205,13 @@ footer{
     text-align: center;
     margin-top: 10px;
 }
+.pt2 a{
+    color: #fff;
+    text-decoration: none;
+}
+.pt2 a:visited{
+    color: #fff;
+}
 .pt3{
     width: 33%;
     color: #fff;
@@ -208,6 +235,37 @@ footer{
 .icon-link{
     width: 70%;
 
+}
+.text-list li{
+    /* text-align: center; */
+    margin: 10%;
+    list-style: circle;
+}
+
+/* pagina pedidos */
+.card{
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+    height: 40px auto;
+    background-color: rgba(240, 248, 255, 0);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.46); 
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 5px;
+}
+.card:hover{
+    border: 1px solid rgb(38, 206, 122);
+    transition: 0.2s ease-in-out;
+    transform: scale(1.05);
+    outline: 0;
+}
+.menu-pedidos{
+    margin: auto;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
 }
 @media (max-width: 795px) {
     #divLogo{

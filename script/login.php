@@ -2,18 +2,22 @@
 session_start();
 include_once("conexao.php");
 
-$user = $_POST['user'];
+$user = filter_input(INPUT_POST, 'user', FILTER_SANITIZE_SPECIAL_CHARS);
 // $entrar = $_POST['entrar'];
 $senha = md5($_POST['pass']);
-$query = "SELECT * FROM cliente WHERE usuario = '$user' AND senha = '$senha'";
+$query = "SELECT * FROM cliente WHERE usuario = BINARY '$user' AND senha = BINARY '$senha'";
 $verifica = mysqli_query($conexao, $query) or die("Erro de seleção". mysqli_error($conexao));
 if(mysqli_num_rows($verifica) <= 0){
     echo"<script language='javascript' type='text/javascript'>
     alert('Login e/ou senha incorretos');window.location
-    .href='../login.html';</script>";
+    .href='../login.php';</script>";
     die();
 }else{
+    $arrayDados = mysqli_fetch_array($verifica);
+    $id = $arrayDados['id_cliente'];
+    $_SESSION['id'] = $id;
     $_SESSION['user'] = $user;
+    
     header("location:../index.php");
 }
 

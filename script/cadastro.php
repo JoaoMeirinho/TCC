@@ -1,11 +1,11 @@
 <?php 
 include_once('conexao.php');
 // pegando dados do form cadastro
-$nome = $_POST["nome"];
-$mail = $_POST["mail"];
-$numTel = $_POST["numTel"];
-$endereco = $_POST["endereco"];
-$user = $_POST["user"];
+$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+$mail = filter_input(INPUT_POST, 'mail', FILTER_SANITIZE_EMAIL);
+$numTel = filter_input(INPUT_POST, 'numTel', FILTER_SANITIZE_NUMBER_INT);
+$endereco = filter_input(INPUT_POST, 'user', FILTER_SANITIZE_SPECIAL_CHARS);
+$user = filter_input(INPUT_POST, 'user', FILTER_SANITIZE_SPECIAL_CHARS);
 $pass = md5($_POST["pass"]);
 
 // fazendo a consulta no banco de dados
@@ -24,7 +24,7 @@ else{
     if($insert){
         echo"<script language='javascript' type='text/javascript'>
         alert('Usuário cadastrado com sucesso!');window.location.
-        href='../login.html'</script>";
+        href='../login.php'</script>";
       }
       else{
         echo"<script language='javascript' type='text/javascript'>

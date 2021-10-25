@@ -1,13 +1,18 @@
-
-<!-- <?php
+<?php
 session_start();
+include_once('script/conexao.php');
 if (isset($_SESSION['user'])){
-echo "Bem-vindo(a),".$_SESSION['user'];
+$user = $_SESSION['user'];
+echo "<p>Bem-vindo(a),".$user."</p>";
+$query = "SELECT * FROM cliente WHERE usuario = '$user'";
+$verifica = mysqli_query($conexao,$query);
+$array = mysqli_fetch_array($verifica);
+$id=$array['id_cliente'];
 };
 
 
 
-?> -->
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -22,11 +27,18 @@ echo "Bem-vindo(a),".$_SESSION['user'];
          <!-- <img src="img/sidebar2.png" alt="" id="sidebar"> -->
         <ul class="menu">
            <li><a href='index.php'>Home</a></li>
-           <li><a>Serviços</a></li>
+           <li><a href="servicos.php">Serviços</a></li>
            <li><a href='sobre.php'>Sobre</a></li>
         </ul>
         <div id="divLogo"><img src="img/logoRETIS.png" alt="" id="logo"></div>
-        <button class="login"><a href="login.php">Login</a></button>
+        <?php
+        if(empty($_SESSION['user'])){
+            echo "<button class='login'><a href='login.php'>Login</a></button>";
+        }else{
+           echo '<button class="login-on"><a href="pedidos.php">Pedidos</a></button>';
+        };
+         ?>
+        
    </nav>
    <div class="image">
       <h1>Massagens Terapêuticas</h1>
@@ -59,18 +71,18 @@ echo "Bem-vindo(a),".$_SESSION['user'];
          <div class="pt2">
             <h2>Acesso Rápido</h2>
             <ul>
-               <li>Home</li>
-               <li>Serviços</li>
-               <li>Sobre</li>
+               <a href="index.php"><li>Home</li></a>
+               <a href="servicos.php"><li>Serviços</li></a>
+               <a href="sobre.php"><li>Sobre</li></a>
             </ul>
          </div>
          <div class="pt3">
             <h2>Contate-nos</h2>
             <div class="icons">
-               <a href=""><img src="img/instagram.png" alt="" class="icon-link"></a>
-               <a href=""><img src="img/whatsapp.png" alt="" class="icon-link"></a>
-               <a href=""><img src="img/facebook.png" alt="" class="icon-link"></a>
-               <a href=""><img src="img/mail.png" alt="" class="icon-link"></a>
+               <a href="https://www.instagram.com/terapiasintegrativasorocaba/"><img src="img/instagram.png" alt="" class="icon-link"></a>
+               <a href="https://api.whatsapp.com/send?phone=5515996898161"><img src="img/whatsapp.png" alt="" class="icon-link"></a>
+               <a href="https://www.facebook.com/Reflexoterapia-e-Terapias-Integrativas-Sorocaba-626355597815833"><img src="img/facebook.png" alt="" class="icon-link"></a>
+               <a href="mailto:mcftintegrativas@gmail.com"><img src="img/mail.png" alt="" class="icon-link"></a>
             </div>
          </div>
    </footer>
