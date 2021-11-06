@@ -4,10 +4,6 @@ include_once('script/conexao.php');
 if (isset($_SESSION['user'])){
 $user = $_SESSION['user'];
 echo "<p>Bem-vindo(a),".$user."</p>";
-$query = "SELECT * FROM cliente WHERE usuario = '$user'";
-$verifica = mysqli_query($conexao,$query);
-$array = mysqli_fetch_array($verifica);
-$id=$array['id_cliente'];
 };
 
 
@@ -35,7 +31,7 @@ $id=$array['id_cliente'];
         if(empty($_SESSION['user'])){
             echo "<button class='login'><a href='login.php'>Login</a></button>";
         }else{
-           echo '<button class="login-on"><a href="pedidos.php">Pedidos</a></button>';
+           echo '<button class="login-on"><a href="pedidos.php?situacao=PENDENTE">Pedidos</a></button>';
         };
          ?>
         
@@ -66,7 +62,7 @@ $id=$array['id_cliente'];
    <footer>
          <div class="pt1">
             <h2>Reflexoterapias e Terapias Integrativas Sorocaba</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam in quo voluptatibus, aperiam similique eaque blanditiis labore libero sequi nobis maxime neque tempora consectetur sed laboriosam a, saepe nesciunt ab.</p>
+            <p>Agende já sua consulta e viva a vida ainda melhor!</p>
          </div>
          <div class="pt2">
             <h2>Acesso Rápido</h2>

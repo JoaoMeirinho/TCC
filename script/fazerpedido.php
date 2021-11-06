@@ -2,7 +2,7 @@
 session_start();
 require_once('conexao.php');
 $servico = $_POST['servico'];
-$queryServico = "SELECT * FROM servicos WHERE nomeServico='$servico'";
+$queryServico = "SELECT * FROM servicos WHERE id_servico ='$servico'";
 $validandoServico = mysqli_query($conexao,$queryServico);
 $arrayServico = mysqli_fetch_array($validandoServico);
 

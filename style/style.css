@@ -86,14 +86,14 @@ nav{
     text-decoration: none;
 }
 .btn-pedido{
-    width: 40%;
+    width: 25vw;
 }
 .login-on a{
     color:#096a49;
     text-decoration: none;
 }
 .login-on{
-    width: 12vw;
+    width: 25vw;
     height: 40px;
     padding: 0.5em;
     font-size: clamp(0.2em, 0.4em + 0.4vw, 2em);
@@ -236,9 +236,15 @@ footer{
     width: 70%;
 
 }
+.text-list{
+    margin: auto;
+}
 .text-list li{
     /* text-align: center; */
-    margin: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    /* text-align: center; */
     list-style: circle;
 }
 
@@ -267,6 +273,33 @@ footer{
     display: flex;
     justify-content: space-between;
 }
+.menu-avaliar{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.opt{
+    display: block;
+    width: 50%;
+    text-align: center;
+    /* margin: auto; */
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+    height: 40px;
+    background-color: rgba(240, 248, 255, 0);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.46); 
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 5px;
+}
+form{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    width: 75%;
+}
 @media (max-width: 795px) {
     #divLogo{
         width: 30%;
@@ -286,6 +319,9 @@ footer{
     }
     .menu li{
         margin: 5px;
+    }
+    .login, .btn-pedido, .login-on{
+        width: 20vw;
     }
     .pt1, .pt2, .pt3{
         width: 75%;

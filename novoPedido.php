@@ -24,18 +24,13 @@ if(isset($_SESSION['id'])){
 </head>
 <body>
 <div class="card">
-        <form action="script/fazerpedido.php" method="post">
+        <form action="confirmarpedido.php" method="post">
         <h1> Faça seu Pedido, <?php echo $user ?></h1>
         <div>
-            <!-- <input type="text" name="nome" placeholder="Nome" id="nome" value="<?php echo $nome; ?>" required readonly>
-            <input type="text" name="endereco" placeholder="Endereço" id="endereco" value="<?php echo $endereco; ?>" required readonly>
-            <input type="number" name="numTel" placeholder="Número Telefone" id="numTel" value="<?php echo $numTel; ?>" required>
-            <input type="mail" name="mail" placeholder="Email" id="mail" value="<?php echo $email; ?>" required>
-             -->
             <select name="servico" class='opt'>
                 <?php
                     while($row = mysqli_fetch_assoc($validandoQuery)){
-                        echo "<option value=$row[nomeServico]>$row[nomeServico]</option>";
+                        echo "<option value='$row[id_servico]'>$row[nomeServico]</option>";
                     }
                 ?>
                 

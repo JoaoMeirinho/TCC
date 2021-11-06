@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 if (isset($_SESSION['user'])){
@@ -34,16 +33,11 @@ echo "<p>Bem-vindo(a),".$_SESSION['user']."</p>";
         };
          ?>
    </nav>
-   <!-- <div class="image">
-      <h1>Massagens Terapêuticas</h1>
-      <p>Para viver melhor a vida!</p>
-   </div> -->
-   <h1>O que é a Reflexoterapia?</h1>
-   <p>Uma prática de terapêutica alternativa que consiste na aplicação 
-      de pressão nos pés e nas mãos, de forma a produzir em 
-      efeito noutra parte do corpo. A pressão é aplicada 
-      com o polegar, dedos e mãos segundo técnicas específicas 
-      e sem a utilização de óleos ou loções.
+   <h1>Nossa História</h1>
+   <p>A Reflexoterapias e Terapias Integrativas Sorocaba Nasceu em 
+      2016, com o objetivo de atender àquelas pessoas que precisam de um atendimento dedicado
+      apenas a saúde mental e sempre tivemos em mente que deveriamos ajudar essas pessoas
+      através de terapias alternativas.
    </p>
    <h1>Benefícios da Reflexoterapia </h1>
    <p>
@@ -73,7 +67,7 @@ echo "<p>Bem-vindo(a),".$_SESSION['user']."</p>";
    <footer>
          <div class="pt1">
             <h2>Reflexoterapias e Terapias Integrativas Sorocaba</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam in quo voluptatibus, aperiam similique eaque blanditiis labore libero sequi nobis maxime neque tempora consectetur sed laboriosam a, saepe nesciunt ab.</p>
+            <p>Agende já sua consulta e viva a vida ainda melhor!</p>
          </div>
          <div class="pt2">
             <h2>Acesso Rápido</h2>
