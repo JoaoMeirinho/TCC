@@ -1,7 +1,6 @@
 <?php
 session_start();
 include_once("conexao.php");
-
 $admin = "admin";
 $adminpass = md5("Tcc_Retis_2334512");
 $user = filter_input(INPUT_POST, 'user', FILTER_SANITIZE_SPECIAL_CHARS);

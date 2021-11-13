@@ -33,7 +33,6 @@ if(isset($_SESSION['id'])){
                         echo "<option value='$row[id_servico]'>$row[nomeServico]</option>";
                     }
                 ?>
-                
             </select>
             <input type="submit" name="submit" id="submit">
             

@@ -11,7 +11,7 @@ $idServico = $arrayServico['id_servico'];
 $idUsuario = $_SESSION['id'];
 
 //validando o pedido
-$queryInserirPedido = "INSERT INTO agenda (id_cliente, id_servico, situacao) VALUES ('$idUsuario','$idServico','PENDENTE')";
+$queryInserirPedido = "INSERT INTO agenda (id_cliente, id_servico, situacao, data) VALUES ('$idUsuario','$idServico','PENDENTE','0000-00-00')";
 $validandoPedido = mysqli_query($conexao,$queryInserirPedido);
 if($validandoPedido){
     echo"<script language='javascript' type='text/javascript'>

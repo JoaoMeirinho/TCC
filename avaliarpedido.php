@@ -38,16 +38,20 @@ if(isset($_SESSION['user'])){
 <body>
 <div class="card">
         <h1> Avaliação de pedido</h1>
+        <form action="script/avaliar.php" method="post">
         <div>
-            <p>Nome do Cliente: <b> <?php echo $arrayCliente['nome']?> </b> </p>
-            <p>Servico: <b> <?php echo $arrayServico['nomeServico']?> </b></p>
-            <select name="situacao" class='opt'>
-               <option value="PENDENTE">PENDENTE</option>
-               <option value="ACEITO">ACEITO</option>
-               <option value="RECUSADO">RECUSADO</option>
-               <option value="REALIZADO">REALIZADO</option>
-            </select>
-            <a href="script/avaliar.php?id=<?php echo $idAgendamento ?>" class="link-btn-submit"><button id='submit' class="opt">Confirmar</button></a>
+                <input type="hidden" name='idAgendamento' value="<?php echo $idAgendamento?>">
+                <p>Nome do Cliente: <b> <?php echo $arrayCliente['nome']?> </b> </p>
+                <p>Servico: <b> <?php echo $arrayServico['nomeServico']?> </b></p>
+                <select name="situacao" class='opt'>
+                    <option value="PENDENTE">PENDENTE</option>
+                    <option value="ACEITO">ACEITO</option>
+                    <option value="RECUSADO">RECUSADO</option>
+                    <option value="REALIZADO">REALIZADO</option>
+                </select>
+                <p>Agendar para:</p>
+                <input type="date" name="data" id="data">
+                <input type="submit" name="submit" value="Enviar" id='submit'>
         </div>
     </form>
     </div>

@@ -17,9 +17,9 @@ if (isset($_SESSION['user'])){
    }
 
    if ($user == 'admin'){
-      $query = "SELECT * FROM agenda WHERE situacao = '$situacao'";
+      $query = "SELECT * FROM agenda WHERE situacao = '$situacao' ORDER BY data ASC";
    }else{
-      $query = "SELECT * FROM agenda WHERE id_cliente = '$id' AND situacao = '$situacao'ORDER BY id_agendamento DESC";
+      $query = "SELECT * FROM agenda WHERE id_cliente = '$id' AND situacao = '$situacao'ORDER BY data ASC";
    }
 
    $validandoQuery = mysqli_query($conexao,$query);
@@ -58,6 +58,9 @@ if (isset($_SESSION['user'])){
 </form>
 <h1>Pedidos:</h1>
 <?php
+if(!$validandoQuery){
+echo mysqli_error($conexao);
+}
    while ($row = mysqli_fetch_assoc($validandoQuery)){
       $queryServico = "SELECT * FROM servicos WHERE id_servico = '$row[id_servico]'";
       $validandoQueryServico = mysqli_query($conexao, $queryServico);
@@ -66,6 +69,9 @@ if (isset($_SESSION['user'])){
       echo "<div class = 'card'>
                <h1> Pedido: ".$arrayServico['nomeServico']."</h1>
                <p> Situação: <b>".$row['situacao']."</b></p>";
+      if($row['situacao'] == 'ACEITO' || $row['situacao'] == 'REALIZADO'){
+         echo "<p> Agendado para: <b>".date('d/m/Y', strtotime($row['data']))."</b></p>";
+      }
       if($user == 'admin'){
          $queryUser = "SELECT * FROM cliente WHERE id_cliente = '$row[id_cliente]'";
          $validandoQueryUser = mysqli_query($conexao, $queryUser);

@@ -25,8 +25,11 @@ echo "<p>Bem-vindo(a),".$user."</p>";
            <li><a href='index.php'>Home</a></li>
            <li><a href="servicos.php">Serviços</a></li>
            <li><a href='sobre.php'>Sobre</a></li>
+           <?php
+            if(isset($_SESSION['user'])) echo "<li><a href='sair.php'>Sair</a></li>";
+           ?>
         </ul>
-        <div id="divLogo"><img src="img/logoRETIS.png" alt="" id="logo"></div>
+        <div id="divLogo"><img src="img/logogus.png" alt="" id="logo"></div>
         <?php
         if(empty($_SESSION['user'])){
             echo "<button class='login'><a href='login.php'>Login</a></button>";
@@ -55,7 +58,7 @@ echo "<p>Bem-vindo(a),".$user."</p>";
       <p id="name"> -Teixeira, Consuele</p>
    </div>
    <h1>Curtiu? Então agende já sua consulta!</h1>
-   <button class="btn-agendar">Agendar Consulta</button>
+   <a href="novoPedido.php"><button class="btn-agendar">Agendar Consulta</button></a>
    <div class="mapa">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14646.567770242542!2d-47.3903991252475!3d-23.401167063394844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf5e965c1cabb9%3A0x51d95a530847f2b5!2sCajuru%20do%20Sul%2C%20Sorocaba%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1629808303163!5m2!1spt-BR!2sbr" width="75%" height="450" style="border:0;" allowfullscreen="" loading="lazy" id="maps"></iframe>
    </div>

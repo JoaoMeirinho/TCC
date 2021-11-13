@@ -25,8 +25,11 @@ echo "<p>Bem-vindo(a),".$_SESSION['user']."</p>";
            <li><a href='index.php'>Home</a></li>
            <li><a href="servicos.php">Serviços</a></li>
            <li><a href='sobre.php'>Sobre</a></li>
+           <?php
+            if(isset($_SESSION['user'])) echo "<li><a href='sair.php'>Sair</a></li>";
+           ?>
         </ul>
-        <div id="divLogo"><img src="img/logoRETIS.png" alt="" id="logo"></div>
+        <div id="divLogo"><img src="img/logogus.png" alt="" id="logo"></div>
         <?php
         if(empty($_SESSION['user'])){
             echo "<button class='login'><a href='login.php'>Login</a></button>";
